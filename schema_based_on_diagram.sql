@@ -17,14 +17,16 @@ CONSTRAINT medical_histories_pk PRIMARY KEY (id),
 CONSTRAINT medical_histories_fk FOREIGN KEY (patient_id) REFERENCES patients(id) ON DELETE CASCADE ON UPDATE CASCADE
 ); 
 
-CREATE TABLE public.treatments (
+/* CREATE TABLE TREATMENTS */
+CREATE TABLE treatments (
 id int NOT NULL GENERATED ALWAYS AS IDENTITY,
 "type" varchar(100) NULL,
 "name" varchar(100) NULL,
 CONSTRAINT treatments_pk PRIMARY KEY (id)
 ); 
 
-CREATE TABLE public.invoice_items (
+/* CREATE TABLE INVOICE ITEMS */
+CREATE TABLE invoice_items (
 id int NOT NULL GENERATED ALWAYS AS IDENTITY,
 unit_price decimal NULL,
 quantity int NULL,
@@ -32,5 +34,5 @@ total_price decimal NULL,
 invoice_id int NULL,
 treatment_id int NULL,
 CONSTRAINT invoice_items_pk PRIMARY KEY (id),
-CONSTRAINT invoice_items_fk FOREIGN KEY (treatment_id) REFERENCES public.treatments(id) ON DELETE CASCADE ON UPDATE CASCADE
+CONSTRAINT invoice_items_fk FOREIGN KEY (treatment_id) REFERENCES treatments(id) ON DELETE CASCADE ON UPDATE CASCADE
 ); 
