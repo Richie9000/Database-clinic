@@ -2,7 +2,7 @@
 /* CREATE PATIENTS TABLE */
 CREATE TABLE patients (
 id int NOT NULL GENERATED ALWAYS AS IDENTITY,
-"name" varchar(100) NULL,
+name varchar(100) NULL,
 date_of_birth date NULL,
 CONSTRAINT patients_pk PRIMARY KEY (id)
 ); 
@@ -20,8 +20,8 @@ CONSTRAINT medical_histories_fk FOREIGN KEY (patient_id) REFERENCES patients(id)
 /* CREATE TABLE TREATMENTS */
 CREATE TABLE treatments (
 id int NOT NULL GENERATED ALWAYS AS IDENTITY,
-"type" varchar(100) NULL,
-"name" varchar(100) NULL,
+type varchar(100) NULL,
+name varchar(100) NULL,
 CONSTRAINT treatments_pk PRIMARY KEY (id)
 ); 
 
