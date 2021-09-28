@@ -36,7 +36,7 @@ To get a local copy up and running follow these simple example steps.
 
 👤 **Gabriel R.**
 
-- GitHub: [@githubhandle](https://github.com/gabrielyea)
+- GitHub: [@gabrielyea](https://github.com/gabrielyea)
 
 👤 **Rhyne S.**
 
